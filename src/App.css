@@ -1,14 +1,11 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-image: url(./img/imgBackground.svg) ;
+  background-attachment: fixed;
 
-.App{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
-
-.content{
-  display: inline-block;
-}
-
 ul{
   margin: 0px;
   padding: 0px;
@@ -25,3 +22,20 @@ li{
 h1{
   font-size: 1.5rem;
 }
+
+
+
+
+
+.App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content{
+  display: inline-block;
+}
+
+
