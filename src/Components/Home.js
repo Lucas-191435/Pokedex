@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CardPokemon from './CardPokemon';
-import './home.css'
+import styles from './Home.module.css';
 
 const Home = ()=>{
   const [pokemons, setPokemons] = React.useState(null);
@@ -32,7 +32,7 @@ const Home = ()=>{
   if(pokemons === null) return null;
 
   return (
-    <div className='home'> 
+    <div className={styles.home}> 
       {pokemons.map((pokemon)=>(
         <Link pokemon={pokemon} to={`infoPokemon/${pokemon.name}`} key={pokemon.id}>
           <CardPokemon pokemon={pokemon}/>

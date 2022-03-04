@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from './CardPokemon.module.css';
 
 const CardPokemon = ({pokemon})=>{
   const imgSVG = pokemon.sprites.other.dream_world.front_default;
@@ -7,9 +7,9 @@ const CardPokemon = ({pokemon})=>{
 
   console.log(pokemon)
   return(
-    <div>
+    <div className={styles.card}>
       <img src={imgPNG} alt='{}' />
-      <div className='{}'>
+      <div className={styles.content}>
         <h1>{pokemon.name}</h1>
         <ul>
           {pokemon.types.map((type)=>(
