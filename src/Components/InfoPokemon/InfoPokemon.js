@@ -22,20 +22,22 @@ const InfosPokemon = ({pokemon})=>{
   if(species === null) return null;
   console.log(species)
   return(
+    <>
     <div>
       <ul>
         <li><b>Height:</b> {height}</li>
         <li><b>Weight:</b> {weight}</li>
         <li><b>Abilities: </b>{abilitis.join(', ')}</li>
         <li><b>Capture Rate: </b>{species.capture_rate}</li>
-        <li><b>Habitat:</b> {species.habitat.name}</li>
+        {species.habitat === null ? (<li><b>Habitat:</b> null</li>) : (<li><b>Habitat:</b> {species.habitat.name}</li>)}
       </ul>
     </div>
+    <div>
+      <p>{(species.flavor_text_entries[2].flavor_text).replace('', ' ')}</p>
+    </div>
+    </>
   )
 };
-
-
-
 
 
 const InfoPokemon = ()=>{

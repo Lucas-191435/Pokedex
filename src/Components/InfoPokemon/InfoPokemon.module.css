@@ -8,3 +8,28 @@
 }
 
 /* INFO POKEMON */
+
+
+
+/* STATUS */
+
+.status ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.status li{
+
+  min-width: 200px;
+}
+.status div{
+  display: flex;
+  border: 1px solid #000;
+  height: 15px;
+  max-width: 210px;
+}
+
+.status span{
+  color: white;
+  background: #000;
+}
