@@ -20,11 +20,8 @@ const Evolution  = ()=>{
     pegaCadeia();
   }, []);
 
-  
   let arrayPokemon = []
-
   React.useEffect(() => {
-    
     if(cadeia){
         async function addPokemon(pokemon){
           try{
@@ -38,21 +35,14 @@ const Evolution  = ()=>{
           }finally{
 
           }
-         
       }
-      if(cadeia.species.name) addPokemon(cadeia.species.name);
-      
-      if(cadeia.evolves_to[0].evolves_to) addPokemon(cadeia.evolves_to[0].evolves_to[0].species.name);
-      if(cadeia.evolves_to) addPokemon(cadeia.evolves_to[0].species.name);
-      
-      
+      try{ if(cadeia.species.name) addPokemon(cadeia.species.name);}catch(err){ console.log('')}
+      try{ if(cadeia.evolves_to || cadeia.evolves_to) addPokemon(cadeia.evolves_to[0].species.name);}catch(err){ console.log('')}
+      try{ if(cadeia.evolves_to[0].evolves_to || cadeia.evolves_to[0].evolves_to === []) addPokemon(cadeia.evolves_to[0].evolves_to[0].species.name);}catch(err){ console.log('')} 
     }
   }, [cadeia]);
 
   if(cadeia===null)return null;
-
-  console.log(evolutions);
-
   return(
     <div className={styles.evolution}>
       <ul>
