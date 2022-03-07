@@ -13,7 +13,7 @@ const Home = ()=>{
     if(pokemons === null){
       async function fetchPokemons(){
         let arryPokemon = []
-        for(let i = 1; i <= 12; i++ ){
+        for(let i = 1; i <= 24; i++ ){
           try{
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
             const json = await response.json();
@@ -51,6 +51,8 @@ export default Home;
 // https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg
 // op 1 - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png
 
+
+// IMG elovutions https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/3.png
 
 
 // URL para puxar informações dos pokemons

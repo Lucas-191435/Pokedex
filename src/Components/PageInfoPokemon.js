@@ -17,13 +17,16 @@ export const GlobalStorage = ({children})=>{
   React.useEffect(()=>{
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then((response)=> response.json()).then((json)=> setPokemon(json));
-  }, [id])
+  }, [id]);
+
+
 
   if(pokemon === null) return null;
   return(<GlobalContext.Provider value={pokemon}>{children}</GlobalContext.Provider>)
 }
 
-console.log(styles)
+
+
 
 const PageInfoPokemon = ()=>{
   return(

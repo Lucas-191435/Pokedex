@@ -9,7 +9,7 @@ const Status = ()=>{
     <div className={styles.status}>
       <ul>
         {stats.map((status,index)=>(
-          <li key={status.stat.name}><b>{status.stat.name}: <div><span style={{width: `${(status.base_stat * 1)}%`}}>{status.base_stat}</span></div></b></li>
+          <li key={status.stat.name}><b>{status.stat.name}: <div><span style={{width: `${(status.base_stat * 100 / 200)}%`}}>{status.base_stat}</span></div></b></li>
         ))}
       </ul>
     </div>

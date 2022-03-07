@@ -26,10 +26,14 @@
   display: flex;
   border: 1px solid #000;
   height: 15px;
-  max-width: 210px;
+  max-width: 200px;
 }
 
 .status span{
   color: white;
   background: #000;
+}
+
+.evolution ul{
+  display: flex;
 }
