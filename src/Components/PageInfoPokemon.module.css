@@ -1,0 +1,37 @@
+
+.container{
+  background: white;
+  box-sizing: border-box;
+  padding: 20px; 
+  display: flex;
+  flex-flow: wrap;
+}
+
+.container div{
+  flex: 1;
+  border: 1px solid #000;
+  min-width: 350px;
+}
+
+.container div:nth-child(3){
+  min-width: 650px;
+}
+
+
+@media (max-width:700px) {
+  .container div:nth-child(3){
+    min-width: 350px;
+  }
+}
+
+@media (max-width:420px) {
+  .container div{
+    flex: 1;
+    border: 1px solid #000;
+    min-width: 100%;
+  }
+
+  .container div:nth-child(3){
+    min-width: 100%;
+  }
+}
