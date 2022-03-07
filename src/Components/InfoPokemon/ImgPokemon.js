@@ -1,9 +1,16 @@
 import React from 'react';
+import { GlobalContext } from '../PageInfoPokemon';
+import styles from './InfoPokemon.module.css';
+
 
 
 const ImgPokemon  = ()=>{
+  const pokemon = React.useContext(GlobalContext);
+  console.log(pokemon)
   return(
-    <div>Info ImgPokemon</div>
+    <div className={styles.imgPokemon}>
+      <img src={pokemon.sprites.other["official-artwork"].front_default} />
+    </div>
   )
 }
 
