@@ -9,7 +9,9 @@ const ImgPokemon  = ()=>{
   console.log(pokemon)
   return(
     <div className={styles.imgPokemon}>
+      <div>
       <img src={pokemon.sprites.other["official-artwork"].front_default} />
+      </div>
     </div>
   )
 }

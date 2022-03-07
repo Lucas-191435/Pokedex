@@ -1,6 +1,6 @@
 import React from 'react';
 import { GlobalContext } from '../PageInfoPokemon';
-
+import styles from './InfoPokemon.module.css';
 
 const InfosPokemon = ({pokemon})=>{
   const {height, weight} = pokemon;
@@ -23,8 +23,8 @@ const InfosPokemon = ({pokemon})=>{
   console.log(species)
   return(
     <>
-    <div>
-      <ul>
+    <div className={styles.divInfos}>
+      <ul className={styles.infos}>
         <li><b>Height:</b> {height}</li>
         <li><b>Weight:</b> {weight}</li>
         <li><b>Abilities: </b>{abilitis.join(', ')}</li>
@@ -32,8 +32,8 @@ const InfosPokemon = ({pokemon})=>{
         {species.habitat === null ? (<li><b>Habitat:</b> null</li>) : (<li><b>Habitat:</b> {species.habitat.name}</li>)}
       </ul>
     </div>
-    <div>
-      <p>{(species.flavor_text_entries[2].flavor_text).replace('', ' ')}</p>
+    <div className={styles.blockquete}>
+      <p >{(species.flavor_text_entries[2].flavor_text).replace('', ' ')}</p>
     </div>
     </>
   )
@@ -44,9 +44,9 @@ const InfoPokemon = ()=>{
   const pokemon = React.useContext(GlobalContext);
   
   return(
-    <div>
-      <h1>{pokemon.id}# {pokemon.name}</h1>
-      <ul>
+    <div className={styles.InfoPokemon}> 
+      <h1 className={styles.title}>{pokemon.id}# {pokemon.name}</h1>
+      <ul className={styles.types}>
           {pokemon.types.map((type)=>(
             <li key={type.type.name}>{type.type.name}</li>
           ))}

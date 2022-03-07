@@ -1,32 +1,116 @@
 
 /* IMG POKEMON */
+.imgPokemon{
+  box-sizing: border-box;
+  padding: 0px 15px;
+  
+}
+.imgPokemon > div{
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.15);
+  
+}
 .imgPokemon img{
-  max-width: 350px;
+  max-width: 280px;
   width: 100%;
   margin: 0 auto;
   display: block;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* INFO POKEMON */
+.InfoPokemon{
+  box-sizing: border-box;
+  
+}
+
+.title{
+  margin: 8px 0px;
+}
+.types{
+  display: flex;
+  /* border: 1px solid #000; */
+}
+.types li{
+  border-radius: 3px;
+  text-transform: capitalize;
+  padding: 5px 8px;
+  text-align: center;
+  border: 1px solid #000;
+  margin-right: .5rem;
+}
 
 
+.infos{
+ 
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 10px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  background: white;
+  border: 1px solid #EE5533;
+}
+
+.infos li{
+  max-width: 300px;
+}
+
+.blockquete{
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 3px;
+  color: white;
+  background: #56CC9D;
+  text-align: center;
+}
+
+
+
+
+/* INFO POKEMON end*/
 
 /* STATUS */
+.status{
+  background: white;
+  border: 1px solid #EE5533;
+  margin: 20px auto;
+  border-radius: 5px;
+}
 
 .status ul{
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 0 auto;
 }
-.status li{
+@media (max-width: 580px){
+  .status ul{
+    grid-template-columns: auto;}
+}
 
-  min-width: 200px;
+.status b{text-transform: capitalize;}
+
+.status li{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  /* min-width: 200px */
 }
 .status div{
   display: flex;
   border: 1px solid #000;
   height: 15px;
-  max-width: 200px;
+  min-width: 150px;
+  /* max-width: 200px; */
 }
 
 .status span{
@@ -34,6 +118,98 @@
   background: #000;
 }
 
+
+
+/* STATUS end*/
+
+/* EVOLUTION */
 .evolution ul{
   display: flex;
+}
+
+
+.evolution{
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+}
+
+.evolution ul{
+  position: relative;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.evolution li{
+  position: relative;
+  background: white;
+  text-align: center;
+  /* border: 1px solid #000; */
+}
+
+.evolution h4{
+  margin: 0 auto;
+  left: auto;
+  right: auto;
+  width: 100%;
+  position: absolute;
+}
+/* EVOLUTION end*/
+
+
+
+/* MOVES */
+.moves{
+  background: white;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+.moves ul{
+  
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow: auto;
+  height: 200px;
+  /* min-width: 400px; */
+  padding: 10px 2px;
+  
+}
+
+@media (max-width: 480px){
+  .moves ul{
+    grid-template-columns: auto;}
+}
+.moves span {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+}
+.moves li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 2px 5px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.moves span{
+  display: flex;
+  gap: 10px;
+}
+
+.moves p{
+  margin: 0px;
+  background: #000;
+  color: aliceblue;
+  display: block;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 3px;
 }
