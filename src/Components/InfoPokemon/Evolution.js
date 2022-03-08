@@ -44,15 +44,18 @@ const Evolution  = ()=>{
 
   if(cadeia===null)return null;
   return(
-    <div className={styles.evolution}>
-      <ul>
-        {evolutions.map((evolution)=>(
-          <li key={evolution.name}>
-            <img src={evolution.img} />
-            <h4>{evolution.name}</h4>
-          </li>
-        ))}
-      </ul>
+    <div>
+       <p className={styles.infoTitle}>Evolutions</p>
+      <div className={styles.evolution}>
+        <ul>
+          {evolutions.map((evolution)=>(
+            <li key={evolution.name}>
+              <img src={evolution.img} />
+              <h4>{evolution.name}</h4>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }

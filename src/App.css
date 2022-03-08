@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,400&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,600&display=swap');
+
 body{
+  color: #585858;
+  font-family:'Open Sans', sans-ser ;
   margin: 0px;
   padding: 0px;
   background-image: url(./img/imgBackground.svg) ;

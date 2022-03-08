@@ -1,9 +1,27 @@
 
+
+.infoTitle{
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.infoTitle::before{
+  content: ' ';
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  background: #56CC9D;
+}
+
+
 /* IMG POKEMON */
 .imgPokemon{
   box-sizing: border-box;
-  padding: 0px 15px;
-  
+  padding: 0px 15px;   
 }
 .imgPokemon > div{
   display: block;
@@ -23,16 +41,16 @@
 
 /* INFO POKEMON */
 .InfoPokemon{
-  box-sizing: border-box;
-  
+  box-sizing: border-box;  
 }
-
 .title{
-  margin: 8px 0px;
+  text-transform: capitalize;
+  font-size: 28px;
+  margin: 5px 0px 8px;
 }
 .types{
   display: flex;
-  /* border: 1px solid #000; */
+  margin-bottom: 12px;
 }
 .types li{
   border-radius: 3px;
@@ -43,9 +61,8 @@
   margin-right: .5rem;
 }
 
-
 .infos{
- 
+  font-size: 14px;
   border-radius: 5px;
   display: grid;
   grid-template-columns: auto auto;
@@ -61,6 +78,7 @@
 }
 
 .blockquete{
+  font-size: 0.95rem;
   box-sizing: border-box;
   padding: 10px;
   border-radius: 3px;
@@ -75,11 +93,13 @@
 /* INFO POKEMON end*/
 
 /* STATUS */
+
 .status{
+  font-size: 15px;
   background: white;
   border: 1px solid #EE5533;
-  margin: 20px auto;
   border-radius: 5px;
+  padding: 10px 0px;
 }
 
 .status ul{
@@ -89,7 +109,7 @@
   gap: 10px;
   padding: 10px;
   box-sizing: border-box;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 @media (max-width: 580px){
@@ -103,39 +123,38 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  /* min-width: 200px */
 }
 .status div{
   display: flex;
   border: 1px solid #000;
-  height: 15px;
   min-width: 150px;
-  /* max-width: 200px; */
+  border-radius: 3px;
+  max-height: 25px;
 }
 
 .status span{
+  font-size: 12px;
+  padding: 1px;
+  box-sizing: border-box;
   color: white;
   background: #000;
 }
 
-
-
 /* STATUS end*/
 
 /* EVOLUTION */
-.evolution ul{
-  display: flex;
-}
-
-
 .evolution{
-  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background: white;
   border-radius: 5px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  padding: 20px 0px;
+
 }
+
 
 .evolution ul{
   position: relative;
@@ -148,7 +167,6 @@
   position: relative;
   background: white;
   text-align: center;
-  /* border: 1px solid #000; */
 }
 
 .evolution h4{
@@ -157,6 +175,14 @@
   right: auto;
   width: 100%;
   position: absolute;
+}
+
+
+.evolution img{
+  margin-top: 10px;
+  border-radius: 3px;
+  border: 1px solid #000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 /* EVOLUTION end*/
 
@@ -169,16 +195,13 @@
   border-radius: 5px;
 }
 .moves ul{
-  
   display: grid;
   grid-template-columns: auto auto;
   overflow: auto;
   height: 200px;
-  /* min-width: 400px; */
   padding: 10px 2px;
   
 }
-
 @media (max-width: 480px){
   .moves ul{
     grid-template-columns: auto;}
@@ -195,15 +218,15 @@
   box-sizing: border-box;
   padding: 5px;
   margin: 2px 5px;
-  border: 1px solid #000;
   border-radius: 3px;
+  font-size: 13px;
+  text-transform: capitalize;
+  background: #d6d5d5;
 }
-
 .moves span{
   display: flex;
   gap: 10px;
 }
-
 .moves p{
   margin: 0px;
   background: #000;
