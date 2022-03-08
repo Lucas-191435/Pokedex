@@ -29,10 +29,11 @@
 
 .card li{
   text-align: center;
-  background: #F2F2F2;
   font-size: 14px;
   font-weight: bold;
   border-radius: 5px;
   padding: 10px 12px;
   width: 50px;
+  color: white;
 }
+

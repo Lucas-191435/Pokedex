@@ -13,7 +13,7 @@ const Home = ()=>{
     if(pokemons === null){
       async function fetchPokemons(){
         let arryPokemon = []
-        for(let i = 1; i <= 24; i++ ){
+        for(let i = 1; i <= 150; i++ ){
           try{
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
             const json = await response.json();

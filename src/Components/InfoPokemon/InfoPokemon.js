@@ -1,6 +1,7 @@
 import React from 'react';
 import { GlobalContext } from '../PageInfoPokemon';
 import styles from './InfoPokemon.module.css';
+import '../../App.css';
 
 const InfosPokemon = ({pokemon})=>{
   const {height, weight} = pokemon;
@@ -30,7 +31,7 @@ const InfosPokemon = ({pokemon})=>{
         <li><b>Capture Rate: </b>{species.capture_rate}</li>
         {species.habitat === null ? (<li><b>Habitat:</b> null</li>) : (<li><b>Habitat:</b> {species.habitat.name}</li>)}
       </ul>
-    <div className={styles.blockquete}>
+    <div className={`${styles.blockquete} ${pokemon.types[0].type.name}`}>
       <p >{(species.flavor_text_entries[2].flavor_text).replace('', ' ')}</p>
     </div>
     </>
@@ -46,7 +47,7 @@ const InfoPokemon = ()=>{
       <h1 className={styles.title}>{pokemon.id}# {pokemon.name}</h1>
       <ul className={styles.types}>
           {pokemon.types.map((type)=>(
-            <li key={type.type.name}>{type.type.name}</li>
+            <li className={`${type.type.name}`} key={type.type.name}>{type.type.name}</li>
           ))}
       </ul>
       <InfosPokemon pokemon={pokemon} />
