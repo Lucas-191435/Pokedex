@@ -3,8 +3,11 @@
   background: #ececec;
   box-sizing: border-box;
   padding: 20px; 
+  margin: 0 10px;
   display: flex;
   flex-flow: wrap;
+  border-radius: 3px;
+  
 }
 
 .container > div{

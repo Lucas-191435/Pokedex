@@ -23,7 +23,6 @@ const InfosPokemon = ({pokemon})=>{
   console.log(species)
   return(
     <>
-    <div className={styles.divInfos}>
       <ul className={styles.infos}>
         <li><b>Height:</b> {height}</li>
         <li><b>Weight:</b> {weight}</li>
@@ -31,7 +30,6 @@ const InfosPokemon = ({pokemon})=>{
         <li><b>Capture Rate: </b>{species.capture_rate}</li>
         {species.habitat === null ? (<li><b>Habitat:</b> null</li>) : (<li><b>Habitat:</b> {species.habitat.name}</li>)}
       </ul>
-    </div>
     <div className={styles.blockquete}>
       <p >{(species.flavor_text_entries[2].flavor_text).replace('', ' ')}</p>
     </div>

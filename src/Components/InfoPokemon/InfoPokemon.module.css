@@ -24,6 +24,7 @@
   padding: 0px 15px;   
 }
 .imgPokemon > div{
+  height: 100%;
   display: block;
   margin: 0 auto;
   border-radius: 5px;
@@ -46,11 +47,11 @@
 .title{
   text-transform: capitalize;
   font-size: 28px;
-  margin: 5px 0px 8px;
+  margin: 5px 0px 10px;
 }
 .types{
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 .types li{
   border-radius: 3px;
@@ -60,19 +61,25 @@
   border: 1px solid #000;
   margin-right: .5rem;
 }
-
+.divInfos{
+  display: inline-block;
+}
 .infos{
   font-size: 14px;
   border-radius: 5px;
   display: grid;
   grid-template-columns: auto auto;
-  margin: 10px auto;
+  margin: 20px auto;
   padding: 10px;
   box-sizing: border-box;
   background: white;
   border: 1px solid #EE5533;
 }
-
+@media (max-width: 380px){
+  .infos{
+    grid-template-columns: auto;
+  }
+}
 .infos li{
   max-width: 300px;
 }
@@ -124,6 +131,8 @@
   justify-content: space-between;
   gap: 20px;
 }
+
+
 .status div{
   display: flex;
   border: 1px solid #000;
@@ -140,6 +149,19 @@
   background: #000;
 }
 
+@media (max-width: 380px){
+  .status li{
+    display: block;
+  }
+  .status b{margin-bottom: 5px;};
+
+  .status div{
+    min-width: 0px;
+    flex: 1;
+  }
+}
+
+
 /* STATUS end*/
 
 /* EVOLUTION */
@@ -155,10 +177,15 @@
 
 }
 
-
+.evolution{
+  display: flex;
+  
+}
 .evolution ul{
   position: relative;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 30px;
 }
@@ -174,7 +201,6 @@
   left: auto;
   right: auto;
   width: 100%;
-  position: absolute;
 }
 
 
