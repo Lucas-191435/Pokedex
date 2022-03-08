@@ -1,5 +1,4 @@
 
-
 .infoTitle{
   margin: 0px;
   padding: 0px;
@@ -137,7 +136,7 @@
 
 .status div{
   display: flex;
-  border: 1px solid #000;
+  border: 1px solid rgb(102, 102, 102);
   min-width: 150px;
   border-radius: 3px;
   max-height: 25px;
@@ -148,7 +147,6 @@
   padding: 1px;
   box-sizing: border-box;
   color: white;
-  background: #000;
 }
 
 @media (max-width: 380px){
@@ -257,10 +255,8 @@
 }
 .moves p{
   margin: 0px;
-  background: #000;
   color: aliceblue;
   display: block;
   padding: 5px;
-  border: 1px solid #000;
   border-radius: 3px;
 }

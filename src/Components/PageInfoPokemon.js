@@ -31,7 +31,7 @@ export const GlobalStorage = ({children})=>{
 const PageInfoPokemon = ()=>{
   return(
     <GlobalStorage>
-     <section className={styles.container}>
+     <section className={styles.container + ' animation2'}>
        <ImgPokemon />
        <InfoPokemon />
        <Status />

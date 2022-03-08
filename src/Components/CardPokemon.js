@@ -9,7 +9,7 @@ const CardPokemon = ({pokemon})=>{
   
 
   return(
-    <div className={styles.card}>
+    <div className={styles.card + ' animation2'}>
       <img src={imgPNG} alt='{}' />
       <div className={styles.content}>
         <h1>{pokemon.name}</h1>

@@ -44,7 +44,7 @@ const Evolution  = ()=>{
 
   if(cadeia===null)return null;
   return(
-    <div>
+    <div className='animation2'>
        <p className={styles.infoTitle}>Evolutions</p>
       <div className={styles.evolution}>
         <ul>
