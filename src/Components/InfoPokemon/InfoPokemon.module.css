@@ -201,6 +201,7 @@
   left: auto;
   right: auto;
   width: 100%;
+  text-transform: capitalize;
 }
 
 
