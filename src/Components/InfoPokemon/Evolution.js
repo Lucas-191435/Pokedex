@@ -26,6 +26,7 @@ const Evolution  = ()=>{
             const jsonPokemon = await (await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)).json();
             const {name} = jsonPokemon;
             const img = jsonPokemon.sprites.versions["generation-v"]["black-white"].front_default;
+            const imgGif =  jsonPokemon.sprites.versions["generation-v"]["black-white"].animated.front_default;
             arrayPokemon = [...arrayPokemon,{name: name, img: img}];
             setEvolutions(arrayPokemon);
           }catch(err){

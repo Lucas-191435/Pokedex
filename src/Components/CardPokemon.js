@@ -5,6 +5,7 @@ import '../App.css';
 const CardPokemon = ({pokemon})=>{
   const imgSVG = pokemon.sprites.other.dream_world.front_default;
   const imgPNG =  pokemon.sprites.other["official-artwork"].front_default;
+  const imgGif = pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default;
 
   
 
