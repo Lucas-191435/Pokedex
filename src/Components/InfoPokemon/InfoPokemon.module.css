@@ -1,5 +1,5 @@
 
-.infoTitle{
+.infoComponent{
   margin: 0px;
   padding: 0px;
   font-weight: bold;
@@ -7,7 +7,7 @@
   margin-bottom: 10px;
 }
 
-.infoTitle::before{
+.infoComponent::before{
   content: ' ';
   width: 20px;
   height: 10px;
@@ -20,7 +20,7 @@
 /* IMG POKEMON */
 .imgPokemon{
   box-sizing: border-box;
-  padding: 0px 15px;   
+  padding: 0px 15px; 
 }
 .imgPokemon > div{
   height: 100%;
@@ -63,9 +63,7 @@
   color: white;
   font-weight: bold;
 }
-.divInfos{
-  display: inline-block;
-}
+
 .infos{
   font-size: 14px;
   border-radius: 5px;
@@ -112,17 +110,17 @@
 
 .status ul{
   display: grid;
-  grid-template-columns: auto auto;
-  flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
-  box-sizing: border-box;
-  max-width: 700px;
   margin: 0 auto;
+  max-width: 700px;
+  box-sizing: border-box;
+  grid-template-columns: auto auto;
 }
 @media (max-width: 580px){
   .status ul{
-    grid-template-columns: auto;}
+    grid-template-columns: auto;
+  }
 }
 
 .status b{text-transform: capitalize;}
@@ -135,30 +133,27 @@
 
 
 .status div{
+  flex: 1;
   display: flex;
-  border: 1px solid rgb(102, 102, 102);
-  min-width: 150px;
-  border-radius: 3px;
+  max-width: 150px;
   max-height: 25px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid rgb(102, 102, 102);
 }
 
 .status span{
-  font-size: 12px;
   padding: 1px;
-  box-sizing: border-box;
   color: white;
+  font-size: 12px;
+  box-sizing: border-box; 
 }
 
-@media (max-width: 380px){
+@media (max-width: 350px){
   .status li{
     display: block;
   }
   .status b{margin-bottom: 5px;};
-
-  .status div{
-    min-width: 0px;
-    flex: 1;
-  }
 }
 
 
@@ -169,12 +164,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   background: white;
   border-radius: 5px;
   margin-bottom: 20px;
   margin-right: 10px;
   padding: 20px 0px;
-
 }
 
 .evolution{
@@ -233,11 +228,7 @@
   .moves ul{
     grid-template-columns: auto;}
 }
-.moves span {
-  padding: 0px;
-  margin: 0px;
-  display: inline-block;
-}
+
 .moves li{
   display: flex;
   align-items: center;
@@ -250,10 +241,14 @@
   text-transform: capitalize;
   background: #d6d5d5;
 }
-.moves span{
+
+.moves span {
+  padding: 0px;
+  margin: 0px;
   display: flex;
   gap: 10px;
 }
+
 .moves p{
   margin: 0px;
   color: aliceblue;

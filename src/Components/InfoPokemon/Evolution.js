@@ -8,8 +8,6 @@ const Evolution  = ()=>{
   const [evolutions, setEvolutions] = React.useState([]);
   const urSpecie = React.useContext(GlobalContext).species.url;
   const [cadeia, setCadeia] = React.useState(null);
-  const [specie, setSpecie] = React.useState(null);
-
   React.useEffect(()=> {
     async function pegaCadeia(){
       const urlCadeia = await fetch(urSpecie).then((response)=> response.json()).then((json)=> { return json.evolution_chain.url} );
@@ -33,7 +31,6 @@ const Evolution  = ()=>{
           }catch(err){
             console.log('algum erro');
           }finally{
-
           }
       }
       try{ if(cadeia.species.name) addPokemon(cadeia.species.name);}catch(err){ console.log('')}
@@ -45,7 +42,7 @@ const Evolution  = ()=>{
   if(cadeia===null)return null;
   return(
     <div className='animation2'>
-       <p className={styles.infoTitle}>Evolutions</p>
+       <p className={styles.infoComponent}>Evolutions</p>
       <div className={styles.evolution}>
         <ul>
           {evolutions.map((evolution)=>(

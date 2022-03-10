@@ -2,8 +2,9 @@ import React from 'react';
 import { GlobalContext } from '../PageInfoPokemon';
 import styles from './InfoPokemon.module.css';
 import '../../App.css';
+import Head from '../Head';
 
-const InfosPokemon = ({pokemon})=>{
+const DadosPokemon = ({pokemon})=>{
   const {height, weight} = pokemon;
   const abilitis = pokemon.abilities.map((abilitie)=>{
     return abilitie.ability.name;
@@ -24,6 +25,7 @@ const InfosPokemon = ({pokemon})=>{
   console.log(species)
   return(
     <>
+    <Head title={pokemon.name} description={pokemon.name}/>
       <ul className={styles.infos}>
         <li><b>Height:</b> {height}</li>
         <li><b>Weight:</b> {weight}</li>
@@ -50,7 +52,7 @@ const InfoPokemon = ()=>{
             <li className={`${type.type.name}`} key={type.type.name}>{type.type.name}</li>
           ))}
       </ul>
-      <InfosPokemon pokemon={pokemon} />
+      <DadosPokemon pokemon={pokemon} />
     </div>
   )
 }

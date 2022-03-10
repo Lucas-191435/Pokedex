@@ -1,6 +1,6 @@
 .home{
   display: grid;
-  grid-template-columns: repeat(4, minmax(50px, 250px));
+  grid-template-columns: repeat(4, minmax(50px, 200px));
   justify-content: center;
   gap: 20px;
   padding: 0px 10px;
@@ -8,7 +8,7 @@
 
 @media (max-width:780px){
   .home{
-    grid-template-columns: repeat(2, minmax(50px, 250px));
+    grid-template-columns: repeat(2, minmax(50px, 200px));
   }
 }
 

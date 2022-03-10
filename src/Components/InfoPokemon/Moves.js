@@ -26,14 +26,13 @@ const Moves = ()=>{
 
 
   if(movesPokemon === []) return null;
-  console.log(movesPokemon)
   return(
     <div className='animation2'>
-      <p className={styles.infoTitle}>Moves</p>
+      <p className={styles.infoComponent}>Moves</p>
       <div className={styles.moves}>
         <ul>
-          {movesPokemon.map(({name, type, pp, power})=>(
-            <li key={name}><b>{name}</b> <span><p className={`${type}`}>{type}</p><p className={`${type}`}>{pp}</p></span></li>
+          {movesPokemon.map(({name, type, pp})=>(
+            <li key={name+'0'}><b>{name}</b> <span><p className={`${type}`}>{type}</p><p className={`${type}`}>{pp}</p></span></li>
           ))}
         </ul>
       </div>

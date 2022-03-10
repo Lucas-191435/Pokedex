@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Head from './Head';
 import Evolution from './InfoPokemon/Evolution';
 import InfoPokemon from './InfoPokemon/InfoPokemon';
 import Moves from './InfoPokemon/Moves';
@@ -25,12 +24,10 @@ export const GlobalStorage = ({children})=>{
   return(<GlobalContext.Provider value={pokemon}>{children}</GlobalContext.Provider>)
 }
 
-
-
-
 const PageInfoPokemon = ()=>{
   return(
     <GlobalStorage>
+      
      <section className={styles.container + ' animation2'}>
        <ImgPokemon />
        <InfoPokemon />
